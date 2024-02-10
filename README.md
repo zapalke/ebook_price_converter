@@ -21,9 +21,9 @@ pip install -r requirements.txt
 
 ## Usage
 To run the program you have to provide path to the source list and path where results should be saved. Optionally you can also provide from which country should the iTunes results be.
-You can either edit the code or run it direclty from **cmd** using this command:
+You can either edit the code or run it directly from **cmd** using this command:
 ```console
-python ebook_price_converter.py <list of ebooks>.csv <results>.json <country code; defauld US>
+python ebook_price_converter.py <list of ebooks>.csv <results>.json <country code; default US>
 ```
 As a result you will get a JSON file with given structure:
 ```json
