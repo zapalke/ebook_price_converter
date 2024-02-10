@@ -53,3 +53,16 @@ As a result you will get a JSON file with given structure:
     }
   },
 ```
+
+## How the app works
+
+The process behind app has 4 stages:
+1. Read data and check for errors
+2. Request data from iTunes API and save it
+3. For each ebook, try to find data from NBP. It has several conditions
+     1. Release date must be after 2002-01-02, because this is the earliest rate available in NBP API
+     2. If data for a given data has been previously requested, it should be saved in *exchange_rates.csv*, so the script will first look there
+     3. If the request to API returns code 403, the script will try to look for the closest possible exchange rate from up to 10 days before.
+4. Save data in JSON format.
+This script can be represented by the following activity diagram.
+![activity diagram](activity_diag.jpg "Activity diagram representing the app")
